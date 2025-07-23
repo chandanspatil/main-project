@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Registaration form</title>
+        <script>
+            function pass Values()
+            {
+                var name=document.getElementById("name").value;
+                var email=document.getElementById("email").value;
+                var address=document.getElementById("address").value;
+                localStorage.setItem("name",name);
+                localStorage.setItem("email",email);
+                localStorage.setItem("address",address);
+                return;
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1>registration form</h1>
+        <form action="Details.html">
+            <field set>
+                <legend>registraion</legend>
+                <label>name</label>
+                <inputtype="text"
+            </field>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,126 @@
+import React, { useState, useEffect } from 'react';
+import './App.css';
+function CartList({ cart }) {
+  const [CART, setCART] = useState(cart);
+  useEffect(() => {
+    setCART(cart);
+  }, [cart]);
+  return (
+    <div>
+      {
+      CART?.map((cartItem, index) => {
+        return(
+          <div>
+          <img src={cartItem.url} width={60} />
+          <span>{cartItem.name}</span>
+          <button onClick={() =>{
+            const_CART=CART.map((item,index)=>{
+              returncartindex===index? {...item,quantity:item.quantity>0?item.quantity1:0}:item
+            })
+            setCART(_CART)
+          }}>
+            -</button>
+            <span>{cartItem.quantity}</span>
+            <button onClick={()=>{
+            const_CART=CART.map((item,index)=>{
+              returncartindex===index? {...item,quantity:item.quantity+1}:item
+            })
+            setCART(_CART)
+          }}>
+            +</button>
+            <span>Rs.{cartItem.price*cartItem.quantity}</span>
+            </div>
+        )
+              })
+            }
+          
+            <p>total=<span>
+              </span>
+              {CART.map(item=>item.price*item.quantity).reduce((total,value)=>total+value,0)}
+              </p>
+              </div>
+          )
+        }        
+export default CartList;
+
+
+
+
+
+
+
+
+{
+                const getTotalPrice = () => {
+                  return cart.reduce((total,item) => total+ item.price,0).toFixed(2);
+                };
+              }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React, { useState, useEffect } from 'react';
+import './App.css';
+function CartList({ cart }) {
+
+  const [CART, setCART] = useState(cart);
+  
+  useEffect(() => {
+    setCART(cart);
+  }, [cart]);
+  return (
+    <div>
+      {
+      CART?.map((cartItem, item ) => {
+        return(
+          <div>
+          <img src={cartItem.url} width={60} />
+          <span>{cartItem.name}</span>
+          <button onClick={() =>{
+            const_CART=CART.map((item,index)=>{
+              returncartindex===index? {...item,quantity:item.quantity>0?item.quantity1:0}:item
+            })
+            setCART(_CART)
+          }}>
+            -</button>
+            <span>{cartItem.quantity}</span>
+            <button onClick={()=>{
+            const_CART=CART.map((item,index)=>{
+              returncartindex===index? {...item,quantity:item.quantity+1}:item
+            })
+            setCART(_CART)
+          }}>
+            +</button>
+            <span>Rs.{cartItem.price*cartItem.quantity}</span>
+            </div>
+        )
+              })
+            }
+            
+            <p>total=<span>
+              </span>
+              
+              {CART.map(item=>item.price*item.quantity).reduce((total,item )=>total+item.price,0)}
+              </p>
+              </div>
+          )
+        }        
+export default CartList;
+
+
